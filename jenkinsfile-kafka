@@ -3,6 +3,8 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
+        sh 'su - ansible'
+        echo ansible
         sh 'ansible-playbook kafka.yml'
       }
     }
